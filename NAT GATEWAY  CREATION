@@ -1,0 +1,62 @@
+1.create one VPC
+
+2.Add DNS HOST NAMES 
+
+3.CREATE two subnets i.e. 
+One is private subnet and second is public subnet
+
+4.create internet gateway and attached to VPC
+
+5.go to ROUTE TABLE 
+create one route table 
+in route table 
+go 
+subnet associates add public subnet it will become public subnet
+Go in route edits add 0.0.0.0/0 and  add igw and save 
+(Don't add private subnet )
+
+6.now go for EC2 
+HERE create 2 instances
+A. one is for private server and 
+ B.other one is for public server 
+
+7.Connect public server and ping www.google.com
+We will get success
+
+8.now connect private subnet and 
+You can't get Connect because here no route table 
+SO
+
+9.in public subnet
+Type 
+vi happyshiva.pem(for file creation)
+
+10.copy pem key from downloads and 
+
+11.type( I) for insert mode 
+
+12. Press ESC
+13.
+14. :wq(for save)
+15. 
+16.ls (for check list)
+17.cat happy Shiva.pem(for file there)
+
+18.chmod 400 shiva234.pem(for file exists)
+
+19.type 
+Ssh -i happyShiva.pem ec2-user @private IP address
+
+18.go in vpc
+NAT GATEWAY CREATION
+Create NAT 
+
+19.GO routes 
+Create new route and add subnet associates with private subnet 
+Go in routes add 0.0.0.0/0
+And IGT AND save 
+Now 
+You can ping in public server google.com
+
+
+
