@@ -1,0 +1,29 @@
+1.create VPC Which includes 
+ a.vpc
+  b.subnet(one)
+  c.IGW
+  d.route table 
+  e.securty group
+  2. Create ONE EC2 in one region (i.e n.verginia)
+
+
+NOTE:THE SAME PROCESS WILL BE DO IN ANOTHER REGION(i.e ohio)
+
+3.connect two instances in DIFFERENT REGIONS 
+
+4.PING GOOGLE.COM you will get success (IN BOTH DIFFERENT INSTANCES )
+
+5.FOR PEERING CONNECTIONS
+
+A.go vpc peering connections (N.VERNIA) CREATE peering connections and it will ask u other region(OHIO) vpc id
+
+b.copy that vpc id and paste and send request to required region
+
+6.now go in other region(ohio) go peering connections and ACCEPT REQUEST
+
+7.NOW add ROUTES 
+   a.in N.VERGINIA ADD routes like 192.168.0.0/16 and save
+
+8.go in OHIO add routes in route table like 10.1.0.0/16
+
+now go in different regions ping different ip addresses u can get success
